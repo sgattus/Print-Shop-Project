@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="Anchor" prefHeight="500" prefWidth="725 " stylesheets="/sample/sample.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <RadioButton fx:id="P1" layoutX="149.0" layoutY="130.0" mnemonicParsing="false" text="P1">
+         <toggleGroup>
+            <ToggleGroup fx:id="colorTogGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="P2" layoutX="149.0" layoutY="150.0" mnemonicParsing="false" text="P2" toggleGroup="$colorTogGroup" />
+      <RadioButton fx:id="P3" layoutX="149.0" layoutY="170.0" mnemonicParsing="false" text="P3" toggleGroup="$colorTogGroup" />
+      <RadioButton fx:id="GS" layoutX="149.0" layoutY="190.0" mnemonicParsing="false" text="Gray Scale" toggleGroup="$colorTogGroup" />
+      <Button fx:id="orderButton" layoutX="326.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#mouseClickHandler" text="Order" textFill="TEAL" />
+      <Label fx:id="resultLabel" layoutX="142.0" layoutY="395.0" prefHeight="43.0" prefWidth="422.0" textAlignment="CENTER" />
+      <RadioButton fx:id="Matte" layoutX="325.0" layoutY="132.0" mnemonicParsing="false" text="Matte">
+         <toggleGroup>
+            <ToggleGroup fx:id="typeTogGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="Glossy" layoutX="325.0" layoutY="158.0" mnemonicParsing="false" text="Glossy" toggleGroup="$typeTogGroup" />
+      <RadioButton fx:id="Luster" layoutX="325.0" layoutY="183.0" mnemonicParsing="false" text="Luster" toggleGroup="$typeTogGroup" />
+      <Label fx:id="colorErrorLabel" layoutX="39.0" layoutY="230.0" prefHeight="17.0" prefWidth="255.0" textAlignment="CENTER" />
+      <Label fx:id="typeErrorLabel" layoutX="241.0" layoutY="215.0" prefHeight="17.0" prefWidth="233.0" textAlignment="CENTER" />
+      <TextField fx:id="pagesField" layoutX="279.0" layoutY="271.0" />
+      <Label fx:id="pagesErrorLabel" layoutX="90.0" layoutY="315.0" prefHeight="17.0" prefWidth="531.0" textAlignment="CENTER" />
+      <RadioButton fx:id="Letter" layoutX="489.0" layoutY="132.0" mnemonicParsing="false" text="Letter">
+         <toggleGroup>
+            <ToggleGroup fx:id="sizeTogGroup" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="A4" layoutX="489.0" layoutY="158.0" mnemonicParsing="false" text="A4" toggleGroup="$sizeTogGroup" />
+      <Label fx:id="sizeErrorLabel" layoutX="398.0" layoutY="200.0" prefHeight="17.0" prefWidth="313.0" textAlignment="CENTER" />
+      <Label fx:id="printColorLabel" layoutX="142.0" layoutY="109.0" text="Print Color" textAlignment="CENTER" />
+      <Label fx:id="printTypeLabel" layoutX="327.0" layoutY="109.0" text="Print Type" textAlignment="CENTER" />
+      <Label fx:id="printSizeLabel" layoutX="491.0" layoutY="109.0" text="Print Size" textAlignment="CENTER" />
+      <Label fx:id="titleLabel" layoutX="237.0" layoutY="14.0" text="The Print Shop">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="555.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image fx:id="printImage" url="@printerPic.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="instructionLabel" layoutX="304.0" layoutY="78.0" text="Please Pick Your Order" textAlignment="CENTER">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

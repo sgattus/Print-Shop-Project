@@ -1,0 +1,20 @@
+#Anchor{
+    -fx-background-color: Teal;
+}
+
+.label{
+    -fx-text-fill: Turquoise;
+    -fx-font-family: 'Imprint MT Shadow';
+
+}
+
+.radio-button{
+-fx-text-fill: Turquoise;
+-fx-font-family: 'Imprint MT Shadow';
+}
+
+.button{
+    -fx-background-color: Turquoise;
+
+    -fx-font-family: 'Imprint MT Shadow';
+}
